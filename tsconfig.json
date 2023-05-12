@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        /**  指定生成js模块的规范，可选值有：commonjs, amd, umd, system, es6, es2015, esnext，这里指定是NodeNext，即生成的js模块规范是ES6的模块规范 */
+        "module": "NodeNext", 
+        /** 指定模块解析策略，这里时Node.js默认策略，即先按照Node.js模块规范解析，如果找不到再按照经典的相对路径或者绝对路径，可选值有Classic、Node、Yarn */
+        "moduleResolution": "node", 
+        /**  指定相对于该文件的根路径，用于解析非相对路径的模块导入语句。这里是"src"，也就是项目源代码的根目录 */
+        "baseUrl": "src", 
+        /**  指定生成的JavaScript文件的输出目录，这里是"dist"，也就是项目编译后的代码输出目录 */
+        "outDir": "dist",
+        /** 指定是否生成源映射文件，用于在调试时将生成的JavaScript代码映射回原始TypeScript代码。这里是开启了源映射 */
+        "sourceMap": true,
+        /** 指定是否禁止隐式的any类型，即必须为所有变量和函数参数指定明确的类型。这里是开启了禁止隐式的any类型检查 */
+        "noImplicitAny": true,
+    },
+    /** 指定包含的文件或目录，这里是"src"目录及其子目录下的所有文件。如果没有指定，则默认包含所有.ts、.tsx、.d.ts和.js文件。 */
+    "include": ["src/**/*"],
+}
